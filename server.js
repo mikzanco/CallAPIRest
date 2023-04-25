@@ -10,4 +10,11 @@ fastify.get('/', (req, reply) => {
     })
 })
 
-fastify.listen
+// avviamo il server
+fastify.listen({port: 3000}, (err, address) => {
+    if(err) {
+        console.error(err)
+    }
+
+    console.log(`Fastify is running at ${address}`)
+})
